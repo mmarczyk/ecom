@@ -1,0 +1,161 @@
+.TopBanner {
+  & {
+    height: 300px;
+    margin: 20px 0;
+  }
+  img {
+    & {
+      max-height: 100%;
+      border-radius: 5px;
+    }
+  }
+  > div {
+    & {
+      height: 100%;
+      display: inline-block;
+    }
+    &:last-child {
+      & {
+        margin-left: 10px;
+      }
+      div:first-child {
+        height: 67%;
+        margin-bottom: 5%;
+      }
+      div:last-child {
+        height: 30%;
+      }
+    }
+  }
+}
+
+.Popular {
+  & {
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+  }
+  > span {
+    padding-left: 10px;
+    font-size: 1.5em;
+    line-height: 2em;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  li {
+    & {
+      display: inline-block;
+      margin-bottom: 20px;
+      width: 200px;
+    }
+
+    > div {
+      & {
+        margin: 0 10px;
+        text-align: right;
+      }
+      img {
+        width: 100%;
+        display: block;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px 1px #bbb;
+      }
+      span {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+    }
+
+    &:hover > div > img {
+      box-shadow: 0 0 6px 4px #bbb;
+      transition: box-shadow 1s;
+    }
+
+  }
+}
+
+.About {
+  & {
+    padding: 0 15%;
+    background: #e9fbd1;
+    margin: 20px 0;
+  }
+
+  li {
+    width: 24.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  li > div {
+    padding: 20px;
+    font-style: italic;
+  }
+
+  h1 {
+    font-size: 1.7em;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 0.95em;
+    line-height: 1.4em;
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  .TopBanner {
+    height: 275px;
+  }
+
+  .Popular {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .About {
+    padding: 0;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .TopBanner {
+    height: 200px;
+  }
+
+  .About {
+    li {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .TopBanner {
+    & {
+      height: auto;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    div {
+      display: inline-block;
+      height: auto !important;
+      margin: 0 !important;
+    }
+  }
+
+  .Popular li {
+    width: 50%;
+  }
+
+  .About {
+    li {
+      width: 100%;
+    }
+  }}

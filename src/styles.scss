@@ -1,0 +1,22 @@
+$breakpoint-phone: 667px; 
+$breakpoint-tablet: 823px; 
+$breakpoint-desktop: 1024px;
+
+@import "./view/header/header.scss";
+@import "./view/header/menu.scss";
+@import "./view/footer/footer.scss";
+@import "./view/content/homepage/homepage.scss";
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+

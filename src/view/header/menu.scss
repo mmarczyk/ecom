@@ -1,0 +1,107 @@
+.Menu {
+  & {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+    margin-top: -15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  > ul > li{
+    & {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 15px;
+      line-height: 2.5em;
+      cursor: pointer;
+    }
+
+    span {
+      padding-bottom: 8px;
+    }
+
+    .sub {
+      position: absolute;
+      display: none;
+      background: #fff;
+      border: 2px solid #ddd;
+      border-top: 1px solid #ddd;
+      border-radius: 0 0 8px 8px;
+      padding: 10px;
+      line-height: 2em;
+      font-size: 0.8em;
+    }
+
+    &:hover span{
+      border-bottom: 2px solid #000;
+    }
+  
+    &:hover .sub {
+      display: block;
+    }
+  }
+
+  .Header &.small {
+    & {
+      display: none;
+      margin: 0;
+      border: 0;
+    }
+
+    .nav {
+      & {
+        font-size: 1.4em;
+      }
+    }
+
+    ul {
+      & {
+        display: none;
+        position: absolute;
+        background: white;
+        margin: 0;
+        width: 100%;
+        left: 0;
+        text-align: left;
+      }
+
+      li {
+        & {
+          display: block;
+        }
+
+        > ul {
+          margin-left: 40%;
+          top:0;
+        }
+      }
+    }
+
+    &:hover > ul {
+      display: block;
+    }
+  }
+
+  &.normal .nav {
+    & {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .Menu {
+    margin-top: 0;
+  }
+}
+
+@media(max-width: $breakpoint-phone) {
+  .Menu {
+    .Header &.normal {
+      display: none;
+    }
+
+    .Header &.small {
+      display: inline-block;
+    }
+  }
+}
